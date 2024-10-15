@@ -57,7 +57,6 @@ app.get('/countries/region/:region', async (req, res) => {
 
 app.get('/country/search', async (req, res) => {
     const name = req.query.name;
-    console.log('name>>', name)
     if (!name) {
         return res.status(400).json({ message: 'Please provide a country name to search' });
     }
