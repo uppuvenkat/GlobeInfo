@@ -8,7 +8,7 @@ app.use(cors());
 const COUNTRIES_API_URL = 'https://restcountries.com/v3.1';
 
 
-// Helper function to filter necessary fields
+// util function to filter necessary fields
 const filterCountryData = (country) => ({
     name: country.name.common,                       
     population: country.population,                  

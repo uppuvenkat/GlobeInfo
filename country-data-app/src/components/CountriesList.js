@@ -1,4 +1,3 @@
-// src/components/CountriesList.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, CardContent, Typography } from '@mui/material';
@@ -16,7 +15,6 @@ const CountriesList = () => {
     const fetchCountries = async () => {
       try {
         const response = await axios.get('http://localhost:5000/countries');
-        console.log(response.data)
         setCountries(response.data);
       } catch (error) {
         console.error('Error fetching countries:', error);

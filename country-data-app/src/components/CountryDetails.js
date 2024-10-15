@@ -7,12 +7,10 @@ import { useParams } from 'react-router-dom';
 const CountryDetails = () => {
   const { code } = useParams();  // Assuming you're using React Router
   const [country, setCountry] = useState(null);
-    console.log('code', code)
   useEffect(() => {
     const fetchCountry = async () => {
       try {
         const response = await axios.get(`http://localhost:5000/countries/${code}`);
-        console.log(response)
         setCountry(response.data[0]);
       } catch (error) {
         console.error('Error fetching country details:', error);
@@ -22,7 +20,7 @@ const CountryDetails = () => {
   }, [code]);
 
   if (!country) return <div>Loading...</div>;
-//   const currency = country.currency ? Object.values(country.currency)[0] : null;
+
   return (
     <Card>
       <CardContent>
