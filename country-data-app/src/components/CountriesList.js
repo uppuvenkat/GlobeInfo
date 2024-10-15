@@ -37,7 +37,7 @@ const CountriesList = () => {
     </Grid>
     <br></br>
     <Grid container spacing={2}>
-      {countries.length>0 ? countries.map((country) => (
+      {countries.length>0  && countries.map((country) => (
         <Grid item xs={12} sm={6} md={4} key={country.name}>
           <CardActionArea onClick={()=>{ window.open(`/country/${country.code}`);}}>
           <Card sx={{ minWidth: 350, maxWidth: 350 }}>
@@ -50,7 +50,7 @@ const CountriesList = () => {
           </Card>
           </CardActionArea>
         </Grid>
-      )): "Loading..."}
+      ))}
     </Grid>
   </>
   );
