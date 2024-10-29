@@ -14,7 +14,7 @@ const CountriesList = () => {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/countries');
+        const response = await axios.get('https://globeinfobackend.onrender.com/countries');
         setCountries(response.data);
       } catch (error) {
         console.error('Error fetching countries:', error);
